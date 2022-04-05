@@ -1,4 +1,4 @@
-package modelo;
+package Model;
 
 public class PagamentoPix extends Pagamento{
 	private String chavePIX;
