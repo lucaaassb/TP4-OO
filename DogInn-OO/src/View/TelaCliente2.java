@@ -7,32 +7,32 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class TelaCliente implements ActionListener {
+public class TelaCliente2 implements ActionListener {
 	private static JFrame janela = new JFrame("DogInn");
 	private static JLabel titulo = new JLabel("Cliente");
-	private static JButton login = new JButton("Login");
-	private static JButton cadastro = new JButton("Cadastrar");
+	private static JButton contratar = new JButton("Contratar serviço");
+	private static JButton cadastraPet = new JButton("Cadastrar Pet");
 	
-	public TelaCliente () {
+	public TelaCliente2 () {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
         titulo.setBounds(155, 10, 150, 30);
-		login.setBounds(140, 55, 100, 40);
-		cadastro.setBounds(140, 105, 100, 40);
+		contratar.setBounds(115, 55, 150, 40);
+		cadastraPet.setBounds(115, 105, 150, 40);
 		
 		janela.setLayout(null);
 		janela.add(titulo);
-		janela.add(cadastro);
-		janela.add(login);
+		janela.add(cadastraPet);
+		janela.add(contratar);
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
 	}
 	
 	public static void main(String[] args) {
-		TelaCliente menu = new TelaCliente();
+		TelaCliente2 menu = new TelaCliente2();
 
-        login.addActionListener(menu);
-        cadastro.addActionListener(menu);
+        cadastraPet.addActionListener(menu);
+        contratar.addActionListener(menu);
     }
 
     @Override
@@ -40,10 +40,8 @@ public class TelaCliente implements ActionListener {
         // TODO Auto-generated method stub
     	Object src = e.getSource();
     	
-    	if(src==login)
-			new LoginCliente();
-    	if(src==cadastro)
-    		new CadastroCliente();
+
+
 
     }
 
