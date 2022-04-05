@@ -37,4 +37,24 @@ public class PagamentoCartaoDeCredito extends Pagamento{
 	public String getCodigoSeguranca() {
 		return codigoSeguranca;
 	}
+
+	public void setBandeiraCartao(String bandeiraCartao) {
+		this.bandeiraCartao = bandeiraCartao;
+	}
+
+	public void setNumeroCartao(String numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+
+	public void setDataValidade(String dataValidade) {
+		this.dataValidade = dataValidade;
+	}
+
+	public void setTitularCartao(String titularCartao) {
+		this.titularCartao = titularCartao;
+	}
+
+	public void setCodigoSeguranca(String codigoSeguranca) {
+		this.codigoSeguranca = codigoSeguranca;
+	}
 }

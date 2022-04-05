@@ -10,7 +10,10 @@ public class TermoDeAceite {
 	public String getCriterioCadastro() {
 		return criterioCadastro;
 	}
-	
+
+	public void setCriterioCadastro(String criterioCadastro) {
+		this.criterioCadastro = criterioCadastro;
+	}
 }
 
 //teste

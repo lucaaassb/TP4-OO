@@ -38,4 +38,28 @@ public class PetSitter {
 	public String getCelularPetSitter() {
 		return telefonePetSitter;
 	}
+
+	public void setNomePetSitter(String nomePetSitter) {
+		this.nomePetSitter = nomePetSitter;
+	}
+
+	public void setSobrenomePetSitter(String sobrenomePetSitter) {
+		this.sobrenomePetSitter = sobrenomePetSitter;
+	}
+
+	public void setEmailPetSitter(String emailPetSitter) {
+		this.emailPetSitter = emailPetSitter;
+	}
+
+	public void setEnderecoPetSitter(String enderecoPetSitter) {
+		this.enderecoPetSitter = enderecoPetSitter;
+	}
+
+	public void setSenhaPetSitter(String senhaPetSitter) {
+		this.senhaPetSitter = senhaPetSitter;
+	}
+
+	public void setTelefonePetSitter(String telefonePetSitter) {
+		this.telefonePetSitter = telefonePetSitter;
+	}
 }

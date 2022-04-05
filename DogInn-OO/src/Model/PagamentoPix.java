@@ -16,4 +16,8 @@ public class PagamentoPix extends Pagamento{
 	public String getChavePIX() {
 		return chavePIX;
 	}
+
+	public void setChavePIX(String chavePIX) {
+		this.chavePIX = chavePIX;
+	}
 }

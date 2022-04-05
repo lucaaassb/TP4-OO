@@ -20,4 +20,9 @@ public abstract class Pagamento {
 		return valorServico;
 	}
 
+	public void setValorServico(float valorServico) {
+		this.valorServico = valorServico;
+	}
+
+
 }
