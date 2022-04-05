@@ -1,5 +1,16 @@
 package Controller;
-import java.util.Scanner;
+
+import Model.*;
+import View.*;
+
+/**
+ * Verificar os dados salvos,armazena,compara e procura pegos nas classes
+ * graficas
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ *
+ */
 
 public class DogInn {
 	public static void main(String[] args) {

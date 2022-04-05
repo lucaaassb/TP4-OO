@@ -19,24 +19,47 @@ public class Cliente {
 		return nomeCliente;
 	}
 
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+
 	public String getSobrenomeCliente() {
 		return sobrenomeCliente;
+	}
+
+	public void setSobrenomeCliente(String sobrenomeCliente) {
+		this.sobrenomeCliente = sobrenomeCliente;
 	}
 
 	public String getEmailCliente() {
 		return emailCliente;
 	}
 
+	public void setEmailCliente(String emailCliente) {
+		this.emailCliente = emailCliente;
+	}
+
 	public String getEnderecoCliente() {
 		return enderecoCliente;
+	}
+
+	public void setEnderecoCliente(String enderecoCliente) {
+		this.enderecoCliente = enderecoCliente;
 	}
 
 	public String getSenhaCliente() {
 		return senhaCliente;
 	}
 
-	public String getCelularCliente() {
+	public void setSenhaCliente(String senhaCliente) {
+		this.senhaCliente = senhaCliente;
+	}
+
+	public String getTelefoneCliente() {
 		return telefoneCliente;
 	}
-	
+
+	public void setTelefoneCliente(String telefoneCliente) {
+		this.telefoneCliente = telefoneCliente;
+	}
 }
