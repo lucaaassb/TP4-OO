@@ -12,17 +12,20 @@ public class TelaCliente2 implements ActionListener {
 	private static JLabel titulo = new JLabel("Cliente");
 	private static JButton contratar = new JButton("Contratar serviço");
 	private static JButton cadastraPet = new JButton("Cadastrar Pet");
+	private static JButton listarPets = new JButton("Lista de Pets");
 	
 	public TelaCliente2 () {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
         titulo.setBounds(155, 10, 150, 30);
 		contratar.setBounds(115, 55, 150, 40);
 		cadastraPet.setBounds(115, 105, 150, 40);
+		listarPets.setBounds(115, 155, 150, 40);
 		
 		janela.setLayout(null);
 		janela.add(titulo);
 		janela.add(cadastraPet);
 		janela.add(contratar);
+		janela.add(listarPets);
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
@@ -33,6 +36,7 @@ public class TelaCliente2 implements ActionListener {
 
         cadastraPet.addActionListener(menu);
         contratar.addActionListener(menu);
+        listarPets.addActionListener(menu);
     }
 
     @Override
