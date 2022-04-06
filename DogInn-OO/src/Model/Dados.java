@@ -52,4 +52,9 @@ public class Dados {
 		this.pets[pos] = p;
 		if(pos == qtdPet) qtdPet++;
 	}
+	
+	public void inserirCliente(Cliente c, int pos) {
+		this.cliente[pos] = c;
+		if(pos == qtdCliente) qtdCliente++;
+	}
 }

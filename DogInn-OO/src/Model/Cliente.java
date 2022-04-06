@@ -1,19 +1,27 @@
 package Model;
 
-public class Cliente {
-	String nomeCliente, sobrenomeCliente, emailCliente, enderecoCliente, senhaCliente, telefoneCliente;
+import java.util.*;
 
-	Cliente(String nomeCliente, String sobrenomeCliente, String emailCliente, String enderecoCliente, String senhaCliente, String telefoneCliente) {
+import modelo.Telefone;
+
+public class Cliente {
+	private String nomeCliente, emailCliente, enderecoCliente, senhaCliente;
+	private Telefone telCliente;
+
+	public Cliente(String nomeCliente, String emailCliente, String enderecoCliente, String senhaCliente, Telefone telCliente) {
 		this.nomeCliente = nomeCliente;
-		this.sobrenomeCliente = sobrenomeCliente;
 		this.emailCliente = emailCliente;
 		this.enderecoCliente = enderecoCliente;
 		this.senhaCliente = senhaCliente;
-		this.telefoneCliente = telefoneCliente;
+		this.telCliente = telCliente;
 	}
 
 	public Cliente() {
-		
+		super();
+	}
+	
+	public String toString() {
+		return "Nome do cliente" + nomeCliente;
 	}
 
 	public String getNomeCliente() {
@@ -22,14 +30,6 @@ public class Cliente {
 
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeCliente = nomeCliente;
-	}
-
-	public String getSobrenomeCliente() {
-		return sobrenomeCliente;
-	}
-
-	public void setSobrenomeCliente(String sobrenomeCliente) {
-		this.sobrenomeCliente = sobrenomeCliente;
 	}
 
 	public String getEmailCliente() {
@@ -55,12 +55,12 @@ public class Cliente {
 	public void setSenhaCliente(String senhaCliente) {
 		this.senhaCliente = senhaCliente;
 	}
-
-	public String getTelefoneCliente() {
-		return telefoneCliente;
+	
+	public Telefone getTelCliente() {
+		return telCliente;
 	}
 
-	public void setTelefoneCliente(String telefoneCliente) {
-		this.telefoneCliente = telefoneCliente;
+	public void setTelCliente(Telefone telCliente) {
+		this.telCliente = telCliente;
 	}
 }

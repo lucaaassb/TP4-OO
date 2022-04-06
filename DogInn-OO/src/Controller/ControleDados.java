@@ -49,5 +49,18 @@ public class ControleDados {
 				return true;
 		}
 	}
+	
+	public boolean inserirCliente(String[] dadosCliente) {
+		if(!dadosCliente[3].matches("[0-9]+") || !dadosCliente[4].matches("[0-9]+") || 
+				!dadosCliente[5].matches("[0-9]+") || !dadosCliente[6].matches("[0-9]+")) {
+			return false;
+		} else {
+				Cliente c = new Cliente(dadosCliente[1], dadosCliente[2], dadosCliente[3], 
+						                dadosCliente[4], new Telefone(Integer.parseInt(dadosCliente[5]),
+								        Integer.parseInt(dadosCliente[6])));
+				d.inserirCliente(c, Integer.parseInt(dadosCliente[0]));
+				return true;
+		}
+	}
 
 }
