@@ -1,4 +1,5 @@
 package Model;
+
 public class Cliente {
 	String nomeCliente, sobrenomeCliente, emailCliente, enderecoCliente, senhaCliente, telefoneCliente;
 
