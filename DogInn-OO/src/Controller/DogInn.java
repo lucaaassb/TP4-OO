@@ -40,7 +40,7 @@ public class DogInn {
 	 *
 	 * @return retorna todos as Babas pegados da função getPetSitters()
 	 */
-	public static Object[] todasasBabas() {
+	public static Object[] todasAsBabas() {
 		ArrayList<String> modelo = new ArrayList<String>();
 		for (PetSitter atual : Main.getPetSitters()) {
 			modelo.add(atual.getNome());

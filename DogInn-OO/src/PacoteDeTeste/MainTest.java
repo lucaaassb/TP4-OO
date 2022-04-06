@@ -10,7 +10,7 @@ import ControleDados;
 import ControlePet;
 
 /**
- * Classe de teste Junit
+ * Classe de teste JUnit
  *
  * @author Lucas Soares
  * @version 1.0 (Abril 2022)
