@@ -27,6 +27,7 @@ public class TelaCliente implements ActionListener {
 		janela.setSize(400, 250);
         janela.setVisible(true);
         
+        
         login.addActionListener(this);
         cadastro.addActionListener(this);
         
