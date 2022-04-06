@@ -7,7 +7,7 @@ public class Pet {
 	double peso;
 	Cliente cliente;
 	
-	Pet(String animal, String tamanho, String sexo, String nome, double peso){
+	public Pet(String animal, String tamanho, String sexo, String nome, double peso){
 		this.nome = nome;
 		this.animal = animal;
 		this.tamanho = tamanho;

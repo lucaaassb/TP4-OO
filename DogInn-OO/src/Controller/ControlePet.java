@@ -1,5 +1,7 @@
 package Controller;
 import Model.*;
+import Model.Dados;
+
 
 public class ControlePet {
 	private Pet[] a;
