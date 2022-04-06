@@ -26,15 +26,13 @@ public class TelaCliente implements ActionListener {
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
+        
+        login.addActionListener(this);
+        cadastro.addActionListener(this);
+        
+        //System.out.println("Passei por aqui, linha 32 construtor de tela cliente");
 	}
 	
-	public static void main(String[] args) {
-		TelaCliente menu = new TelaCliente();
-
-        login.addActionListener(menu);
-        cadastro.addActionListener(menu);
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
