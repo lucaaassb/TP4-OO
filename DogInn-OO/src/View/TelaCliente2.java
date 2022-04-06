@@ -29,15 +29,11 @@ public class TelaCliente2 implements ActionListener {
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
+        
+        cadastraPet.addActionListener(this);
+        contratar.addActionListener(this);
+        listarPets.addActionListener(this);
 	}
-	
-	public static void main(String[] args) {
-		TelaCliente2 menu = new TelaCliente2();
-
-        cadastraPet.addActionListener(menu);
-        contratar.addActionListener(menu);
-        listarPets.addActionListener(menu);
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

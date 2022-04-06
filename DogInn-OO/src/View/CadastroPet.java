@@ -53,15 +53,10 @@ public class CadastroPet implements ActionListener {
 		
 		janela.setSize(400, 250);
 		janela.setVisible(true);
-
-	}
-	
-	public static void main(String[] args) {
-		CadastroPet menu = new CadastroPet();
 		
-		botaoCadastrar.addActionListener(menu);
-	}
-	
+		botaoCadastrar.addActionListener(this);
+
+	}	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

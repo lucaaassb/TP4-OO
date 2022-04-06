@@ -34,14 +34,9 @@ public class LoginSitter implements ActionListener {
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		LoginSitter menu = new LoginSitter();
-
-	     login.addActionListener(menu);
-	}
-	
+        
+        login.addActionListener(this);
+	}	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

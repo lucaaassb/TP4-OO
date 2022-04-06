@@ -34,14 +34,9 @@ public class LoginCliente implements ActionListener {
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
+        
+        login.addActionListener(this);
 	}
-	
-	public static void main(final String[] args) {
-		 LoginCliente menu = new LoginCliente();
-
-	     login.addActionListener(menu);
-	}
-	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

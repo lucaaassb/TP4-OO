@@ -58,15 +58,10 @@ public class CadastroCliente implements ActionListener {
 		
 		janela.setSize(400, 250);
 		janela.setVisible(true);
+		
+		botaoCadastrar.addActionListener(this);
 
 	}
-	
-	public static void main(String[] args) {
-		CadastroCliente menu = new CadastroCliente();
-		
-		botaoCadastrar.addActionListener(menu);
-	}
-	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

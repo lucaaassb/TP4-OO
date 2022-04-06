@@ -64,15 +64,10 @@ public class CadastroSitter implements ActionListener {
 		
 		janela.setSize(400, 280);
 		janela.setVisible(true);
+		
+		botaoCadastrar.addActionListener(this);
 
 	}
-	
-	public static void main(String[] args) {
-		CadastroSitter menu = new CadastroSitter();
-		
-		botaoCadastrar.addActionListener(menu);
-	}
-	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

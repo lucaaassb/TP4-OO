@@ -26,13 +26,10 @@ public class TelaSitter implements ActionListener {
 		
 		janela.setSize(400, 250);
         janela.setVisible(true);
+        
+        login.addActionListener(this);
+        cadastro.addActionListener(this);
 	}
-	
-	public static void main(String[] args) {
-        TelaInicial menu = new TelaInicial();
-
-        login.addActionListener(menu);
-    }
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -41,6 +38,9 @@ public class TelaSitter implements ActionListener {
     	
     	if(src == login)
 			new LoginSitter();
+    	
+    	if(src == cadastro)
+    		new CadastroSitter();
 		
 	}
 
