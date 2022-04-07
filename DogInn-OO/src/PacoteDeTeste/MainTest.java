@@ -6,8 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import Controller.DogInn;
-import ControleDados;
-import ControlePet;
+import Controller.ControleDados;
+import Controller.ControlePet;
+import Controller.ControleCliente;
+import Controller.ControlePetSitter;
 
 /**
  * Classe de teste JUnit
