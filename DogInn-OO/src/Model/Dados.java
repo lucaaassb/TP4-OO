@@ -1,5 +1,13 @@
 package Model;
 
+/**
+ * Classe de Dadps, contendo os metodos desta classe e servindo para
+ * armazenar os dados do projeto, e ......
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
+
 import java.util.*;
 
 public class Dados {

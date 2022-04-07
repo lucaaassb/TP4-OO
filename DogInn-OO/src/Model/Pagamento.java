@@ -1,5 +1,12 @@
 package Model;
 
+/**
+ * Classe de Pagamento, que será herdada por PagamentoPIX e PagamentoCartaoDeCredito
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ */
+
 public abstract class Pagamento {
 		
 	private float valorServico;

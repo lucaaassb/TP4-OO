@@ -2,6 +2,14 @@ package Model;
 
 import Model.Cliente;
 
+/**
+ * Classe de PET, contendo os metodos desta classe e servindo para
+ * armazenar os dados dos pets no ArrayList, e apresentando esses dados na tela de Login do Cliente
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ */
+
 public class Pet {
 	String animal, tamanho, sexo, nome;
 	double peso;

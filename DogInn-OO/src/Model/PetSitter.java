@@ -1,4 +1,13 @@
 package Model;
+
+/**
+ * Classe de PetSitter, contendo os metodos desta classe e servindo para
+ * armazenar os dados das babás no ArrayList
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ */
+
 public class PetSitter {
 	String nomePetSitter, sobrenomePetSitter, emailPetSitter, enderecoPetSitter, senhaPetSitter, telefonePetSitter;
 	
