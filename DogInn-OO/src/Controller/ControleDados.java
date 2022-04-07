@@ -4,6 +4,10 @@ import Model.*;
 
 public class ControleDados {
 	private Dados d = new Dados();
+	
+	public ControleDados() {
+		d.preencherDados();
+	}
 
 	public Dados getD() {
 		return d;

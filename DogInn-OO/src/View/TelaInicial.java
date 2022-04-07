@@ -6,8 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
-import Controller.ControleDados;
+import Controller.*;
 
 public class TelaInicial implements ActionListener {
 
@@ -15,6 +14,7 @@ public class TelaInicial implements ActionListener {
     private static JLabel titulo = new JLabel("Menu Principal");
     private static JButton cliente = new JButton("Cliente");
     private static JButton petSitter = new JButton("PetSitter");
+    private static JButton cadastroCliente = new JButton("Cadastro/Lista clientes");
     public static ControleDados dados = new ControleDados();
 
     public TelaInicial () {
@@ -22,12 +22,14 @@ public class TelaInicial implements ActionListener {
         titulo.setBounds(120, 10, 150, 30);
         cliente.setBounds(140, 55, 100, 40);
         petSitter.setBounds(140, 105, 100, 40);
+        cadastroCliente.setBounds(90, 155, 200, 40);
 
         janela.setLayout(null);
 
         janela.add(titulo);
         janela.add(cliente);
         janela.add(petSitter);
+        janela.add(cadastroCliente);
 
         janela.setSize(400, 250);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,6 +41,7 @@ public class TelaInicial implements ActionListener {
 
         cliente.addActionListener(menu);
         petSitter.addActionListener(menu);
+        cadastroCliente.addActionListener(menu);
     }
 
     @Override
@@ -51,6 +54,9 @@ public class TelaInicial implements ActionListener {
     	
     	if(src == petSitter)
     		new TelaSitter();
+    	
+    	if(src == cadastroCliente)
+    		new Listas().mostrarDados(dados, 2);
 		
 
     }

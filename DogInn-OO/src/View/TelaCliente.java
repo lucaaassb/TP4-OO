@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import Controller.ControleDados;
+import Controller.*;
 
 public class TelaCliente implements ActionListener {
 	private static JFrame janela = new JFrame("DogInn");
@@ -24,7 +24,6 @@ public class TelaCliente implements ActionListener {
 		
 		janela.setLayout(null);
 		janela.add(titulo);
-		janela.add(cadastro);
 		janela.add(login);
 		
 		janela.setSize(400, 250);
@@ -44,9 +43,6 @@ public class TelaCliente implements ActionListener {
     	if(src==login) 
 			new LoginCliente();
     	
-    	if(src == cadastro)
-    		new CadastroCliente().cadastraCliente(dados, this, 0);
-    		System.out.println("Passei por aqui, linha 32 construtor de tela cliente");
 
     }
 

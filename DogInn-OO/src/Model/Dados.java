@@ -17,6 +17,21 @@ public class Dados {
 	private int qtdCliente = 0;
 	private PetSitter[] sitter = new PetSitter[50];
 	private int qtdSitter = 0;
+	private Telefone[] tele = new Telefone[50];
+	private int qtdTele = 0;
+	
+	public void preencherDados() {
+		for(int i = 0; i < 1; i++) {
+			tele[i] = new Telefone(061, 999044112);
+			cliente[i] = new Cliente("Gabriel Cabral", "gabrielbielcabral@gmail.com", "rua 6", "senha", tele[i]);
+			pets[i] = new Pet("Cachorro", "pequeno", "macho", "Pacoca", 10);
+			sitter[i] = new PetSitter("Lucas Soares", "lucassoares@gmail.com", "rua 8", "senha2", tele[i]);
+		}
+		qtdPet = 1;
+		qtdCliente = 1;
+		qtdSitter = 1;
+		qtdTele = 1;
+	}
 	
 	public Pet[] getPets() {
 		return pets;
@@ -54,6 +69,22 @@ public class Dados {
 	}
 	public void setQtdSitter(int qtdSitter) {
 		this.qtdSitter = qtdSitter;
+	}
+	
+	public Telefone[] getTele() {
+		return tele;
+	}
+	
+	public void setTele(Telefone[] tele) {
+		this.tele = tele;
+	}
+	
+	public int getQtdTele() {
+		return qtdTele;
+	}
+	
+	public void setQtdTele(int qtdTele) {
+		this.qtdTele = qtdTele;
 	}
 	
 	public void inserirPet(Pet p, int pos) {

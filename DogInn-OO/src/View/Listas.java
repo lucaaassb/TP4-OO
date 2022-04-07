@@ -1,4 +1,5 @@
 package View;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -11,8 +12,11 @@ public class Listas implements ActionListener, ListSelectionListener {
 	private JFrame janela;
 	private JLabel titulo;
 	private JButton atualizaPet;
+	private JButton cadastraPet;
 	private JButton atualizaCliente;
+	private JButton cadastraCliente;
 	private JButton atualizaSitter;
+	private JButton cadastraSitter;
 	private static ControleDados dados;
 	private JList<String> listaPets;
 	private JList<String> listaClientes;
@@ -59,6 +63,7 @@ public class Listas implements ActionListener, ListSelectionListener {
 			listaClientes = new JList<String>(lista);
 			janela = new JFrame("DogInn");
 			titulo = new JLabel("Clientes Cadastrados");
+			cadastraCliente = new JButton("Cadastrar");
 			atualizaCliente = new JButton("Atualizar");
 			
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
@@ -67,6 +72,7 @@ public class Listas implements ActionListener, ListSelectionListener {
 			listaClientes.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 			listaClientes.setVisibleRowCount(10);
 			
+			cadastraCliente.setBounds(40, 177, 100, 30);
 			atualizaCliente.setBounds(200, 177, 100, 30);
 			
 			janela.setLayout(null);
@@ -74,11 +80,13 @@ public class Listas implements ActionListener, ListSelectionListener {
 			janela.add(titulo);
 			janela.add(listaClientes);
 			janela.add(atualizaCliente);
+			janela.add(cadastraCliente);
 			
 			janela.setSize(400, 250);
 			janela.setVisible(true);
 			
 			atualizaCliente.addActionListener(this);
+			cadastraCliente.addActionListener(this);
 			listaClientes.addListSelectionListener(this);
 			
 			break;
@@ -123,6 +131,9 @@ public class Listas implements ActionListener, ListSelectionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		Object src = e.getSource();
+		
+		if(src == cadastraCliente)
+			new CadastroCliente().cadastraCliente(dados, this, 0);
 		
 		if(src == atualizaPet) {
 			listaPets.setListData(new ControlePet(dados).getNomePet());
