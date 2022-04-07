@@ -19,11 +19,39 @@ import ControlePet;
 public class MainTest {
     DogInn test = new DogInn();
 
+/**
+ * Criado para validar a senha de um usuário.
+ *
+ */
     @SuppressWarnings("static-access")
     @Test
     void testSenha() {
-    	assertTrue(test.senhaPetSitter(123));
-    	assertFalse(test.senhaPetSitter(321));
+    	assertTrue(test.senhaPetSitter());
+    	assertEquals(true, test.senhaPetSitter());
+
+    }
+
+/**
+ * Create a valid account.
+ *
+ */
+    @SuppressWarnings("static-access")
+    @Test
+    void testNomeCliente_vazio() {
+    	assertTrue(test.nomeCliente());
+    	assertEquals(true, test.nomeCliente());
+
+    }
+
+/**
+ * Criado para validar o valor dos serviços prestados.
+ *
+ */
+    @SuppressWarnings("static-access")
+    @Test
+    void testPagamento() {
+    	assertTrue(test.valorServico());
+    	assertEquals(true, test.valorServico());
 
     }
 }
