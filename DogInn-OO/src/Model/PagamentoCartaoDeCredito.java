@@ -2,6 +2,14 @@ package Model;
 
 import Model.Pagamento;
 
+/**
+ * Classe de Pagamento Via Cartão de Crédito, contendo os metodos desta classe e servindo para
+ * armazenar os dados no ArrayList
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ */
+
 public class PagamentoCartaoDeCredito extends Pagamento{
 	private String bandeiraCartao, numeroCartao, dataValidade, titularCartao, codigoSeguranca;
 	

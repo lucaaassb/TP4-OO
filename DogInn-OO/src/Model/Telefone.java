@@ -1,5 +1,13 @@
 package Model;
 
+/**
+ * Classe de Telefone, contendo os metodos desta classe e servindo para
+ * armazenar os dados dos telefones dos clientes
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
+
 public class Telefone {
 	
 	private int DDD;

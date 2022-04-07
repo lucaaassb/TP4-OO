@@ -1,5 +1,16 @@
 package Model;
 
+import java.util.*;
+import Model.Telefone;
+
+/**
+ * Classe de Cliente contendo os metodos desta classe e servindo para
+ * armazenar os dados dos clientes no ArrayList
+ *
+ * @author Lucas Soares
+ * @version 1.0 (Abril 2022)
+ */
+
 public class Cliente {
 	private String nomeCliente, emailCliente, enderecoCliente, senhaCliente;
 	private Telefone telCliente;
