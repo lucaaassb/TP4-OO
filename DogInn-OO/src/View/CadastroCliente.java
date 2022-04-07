@@ -91,6 +91,7 @@ public class CadastroCliente implements ActionListener {
 				boolean res;
 				
 				newData[0] = Integer.toString(dados.getQtdCliente());
+				newData[0] = Integer.toString(posicao);
 				
 				newData[1] = valorNome.getText();
 				newData[2] = valorEmail.getText();
@@ -100,11 +101,9 @@ public class CadastroCliente implements ActionListener {
 				newData[6] = valorTelefone.getText();
 				
 				res = dados.inserirCliente(newData);
-			if(res) {
 				JOptionPane.showMessageDialog(null, 
 					"Usuário cadastrado com sucesso", null, 
 					JOptionPane.INFORMATION_MESSAGE);
-			}
 			}catch (NullPointerException exc1) {
 				mensagemErro();
 			}

@@ -22,15 +22,43 @@ public class Dados {
 	
 	public void preencherDados() {
 		for(int i = 0; i < 1; i++) {
-			tele[i] = new Telefone(061, 999044112);
+			tele[i] = new Telefone(061, 99044112);
 			cliente[i] = new Cliente("Gabriel Cabral", "gabrielbielcabral@gmail.com", "rua 6", "senha", tele[i]);
-			pets[i] = new Pet("Cachorro", "pequeno", "macho", "Pacoca", 10);
-			sitter[i] = new PetSitter("Lucas Soares", "lucassoares@gmail.com", "rua 8", "senha2", tele[i]);
+			pets[i] = new Pet("Cachorro", "pequeno", "macho", "Pacoca", 5);
+			sitter[i] = new PetSitter("Lucas Soares", "lucassoares@gmail.com", "rua 8", "Hospedagem", tele[i]);
 		}
-		qtdPet = 1;
-		qtdCliente = 1;
-		qtdSitter = 1;
-		qtdTele = 1;
+		
+		for(int i = 0; i < 1; i++) {
+			tele[i] = new Telefone(061, 99947412);
+			cliente[i] = new Cliente("Tony Stark", "tonystark@gmail.com", "Manhatam", "senha", tele[i]);
+			pets[i] = new Pet("Cachorro", "grande", "femea", "Atena", 15);
+			sitter[i] = new PetSitter("Thor Odinson", "thor@gmail.com", "Asgard", "Hospedagem", tele[i]);
+		}
+		
+		for(int i = 0; i < 1; i++) {
+			tele[i] = new Telefone(061, 99834112);
+			cliente[i] = new Cliente("Peter Parker", "homemaranha@gmail.com", "queens", "senha", tele[i]);
+			pets[i] = new Pet("Gato", "pequeno", "macho", "Bichano", 3);
+			sitter[i] = new PetSitter("Steven Strange", "doutorestranho@gmail.com", "templo", "Passeio", tele[i]);
+		}
+		
+		for(int i = 0; i < 1; i++) {
+			tele[i] = new Telefone(061, 96956680);
+			cliente[i] = new Cliente("Natasha Romanoff", "viuvanegra@gmail.com", "Russia", "senha", tele[i]);
+			pets[i] = new Pet("Cachorro", "médio", "femea", "Mel", 10);
+			sitter[i] = new PetSitter("Steve Rogers", "capitaoamerica@gmail.com", "Brooklyn", "PetSittering", tele[i]);
+		}
+		
+		for(int i = 0; i < 1; i++) {
+			tele[i] = new Telefone(061, 40028922);
+			cliente[i] = new Cliente("Wanda Maximorf", "feiticeiraescarlate@gmail.com", "Sokovia", "senha", tele[i]);
+			pets[i] = new Pet("Gato", "pequeno", "femea", "Bola de Pelo", 10);
+			sitter[i] = new PetSitter("Carol Danvers", "capitamarvel@gmail.com", "Boston", "Passeio", tele[i]);
+		}
+		qtdPet = 5;
+		qtdCliente = 5;
+		qtdSitter = 5;
+		qtdTele = 5;
 	}
 	
 	public Pet[] getPets() {

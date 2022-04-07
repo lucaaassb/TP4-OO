@@ -11,6 +11,7 @@ package Model;
 public class PetSitter {
 	private String nomePetSitter, emailPetSitter, enderecoPetSitter, senhaPetSitter;
 	private Telefone telPetSitter;
+	private Servico servicoSitter;
 	
 
 	
