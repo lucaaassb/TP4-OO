@@ -47,7 +47,7 @@ public class LoginCliente implements ActionListener {
 		Object src = e.getSource();
 		
 		if(src == login) {
-			new Listas().mostrarDados(dados, 1);
+			new TelaCliente2();
 		}
 	}
 

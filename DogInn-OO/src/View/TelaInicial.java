@@ -50,7 +50,7 @@ public class TelaInicial implements ActionListener {
     	Object src = e.getSource();
     	
     	if(src == cliente)
-			new TelaCliente();
+			new LoginCliente();
     	
     	if(src == petSitter)
     		new TelaSitter();

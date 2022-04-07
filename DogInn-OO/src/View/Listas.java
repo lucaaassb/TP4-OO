@@ -160,6 +160,11 @@ public class Listas implements ActionListener, ListSelectionListener {
 			new CadastroCliente().cadastraCliente(dados, this, 
 					listaClientes.getSelectedIndex());
 		}
+		
+		if(e.getValueIsAdjusting() && src == listaSitter) {
+			new CadastroSitter().cadastraSitter(dados, this, 
+					listaSitter.getSelectedIndex());
+		}
 
 	}
 

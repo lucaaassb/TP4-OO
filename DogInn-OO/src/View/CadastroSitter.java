@@ -7,39 +7,55 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
+import Controller.ControleDados;
+
 import javax.swing.JCheckBox;
 
 public class CadastroSitter implements ActionListener {
-	private static JFrame janela = new JFrame ("DogInn");
+	private static JFrame janela;
 	private static JLabel labelNome = new JLabel("Nome");
-	private static JTextField valorNome = new JTextField(200);
+	private static JTextField valorNome;
 	private static JLabel labelEmail = new JLabel("E-mail");
-	private static JTextField valorEmail = new JTextField(200);
+	private static JTextField valorEmail;
 	private static JLabel labelEnd = new JLabel("Endereco");
-	private static JTextField valorEnd = new JTextField(200);
-	private static JLabel labelSenha = new JLabel("Senha");
-	private static JTextField valorSenha = new JTextField(200);
-	private static JLabel labelServico = new JLabel("Serviço prestado");
-	private static JTextField valorServico = new JTextField(200);
+	private static JTextField valorEnd;
+	private static JLabel labelSenha = new JLabel("Serviço");
+	private static JTextField valorSenha;
 	private static JLabel labelTelefone = new JLabel("Telefone");
-	private static JTextField valorDDD = new JTextField(3);
-	private static JTextField valorTelefone = new JTextField(10);
-	private static JButton botaoCadastrar = new JButton("Cadastrar");
+	private static JTextField valorDDD;
+	private static JTextField valorTelefone;
+	private String[] newData = new String[9];
+	private static JButton botaoContratar = new JButton("Contratar");
 	private static JCheckBox termosAceite = new JCheckBox("Li e concordo com os termos");
+	private static ControleDados dados;
+	private int posicao;
 	
-	public CadastroSitter () {
+	public void cadastraSitter(ControleDados d, Listas p, int pos) {
+		// TODO Auto-generated method stub
+		posicao = pos;
+		dados = d;
+		
+		janela = new JFrame("DogInn");
+		
+		valorNome = new JTextField(dados.getSitter()[pos].getNomePetSitter(), 200);
+		valorEmail = new JTextField(dados.getSitter()[pos].getEmailPetSitter(), 200);
+		valorEnd = new JTextField(dados.getSitter()[pos].getEnderecoPetSitter(), 200);
+		valorSenha = new JTextField(dados.getSitter()[pos].getSenhaPetSitter(), 200);
+		valorDDD = new JTextField(String.valueOf(dados.getSitter()[pos].getTelPetSitter().getDDD()), 3);
+		valorTelefone = new JTextField(String.valueOf(dados.getSitter()[pos].getTelPetSitter().getNumero()), 10);
+	
+	//public CadastroSitter () {
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelEnd.setBounds(40, 50, 150, 25);
 		valorEnd.setBounds(180, 50, 180, 25);
 		labelSenha.setBounds(40, 110, 180, 25);
 		valorSenha.setBounds(180, 110, 180, 25);
-		labelServico.setBounds(40, 140, 150, 25);
-		valorServico.setBounds(180, 140, 180, 25);
 		labelTelefone.setBounds(40, 170, 150, 25);
 		valorDDD.setBounds(180, 170, 28, 25);
 		valorTelefone.setBounds(210, 170, 80, 25);
-		botaoCadastrar.setBounds(245, 205, 115, 30);
+		botaoContratar.setBounds(245, 205, 115, 30);
 		labelEmail.setBounds(40, 80, 150, 25);
 		valorEmail.setBounds(180, 80, 180, 25);
 		termosAceite.setBounds(37, 205, 190, 25);
@@ -54,25 +70,31 @@ public class CadastroSitter implements ActionListener {
 		janela.add(valorEnd);
 		janela.add(labelSenha);
 		janela.add(valorSenha);
-		janela.add(labelServico);
-		janela.add(valorServico);
 		janela.add(labelTelefone);
 		janela.add(valorDDD);
 		janela.add(valorTelefone);
-		janela.add(botaoCadastrar);
+		janela.add(botaoContratar);
 		janela.add(termosAceite);
 		
 		janela.setSize(400, 280);
 		janela.setVisible(true);
 		
-		botaoCadastrar.addActionListener(this);
-
+		botaoContratar.addActionListener(this);
 	}
+		
+
+
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		Object src = e.getSource();
+		
+		if(src == botaoContratar)
+			JOptionPane.showMessageDialog(null, 
+					"Serviço contratado com sucesso!\n Entre em contato com seu Pet Sitter", null, 
+					JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 
-}
+}	
