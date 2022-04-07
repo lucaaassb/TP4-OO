@@ -20,10 +20,6 @@ import Controller.ControlePetSitter;
 
 public class MainTest {
     DogInn test = new DogInn();
-    ControleDados test = new ControleDados();
-    ControlePet test = new ControlePet();
-    ControleCliente test = new ControleCliente();
-    ControlePetSitter test = new ControlePetSitter();
 
 /**
  * Criado para validar a senha de um usuário.
