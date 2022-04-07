@@ -32,7 +32,7 @@ public class MainTest {
     }
 
 /**
- * Create a valid account.
+ * Criado para validar o cadastro de Cliente, para que o usuário não deixe o nome vazio.
  *
  */
     @SuppressWarnings("static-access")
