@@ -8,24 +8,42 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
+import Controller.*;
 
 public class CadastroCliente implements ActionListener {
-	private static JFrame janela = new JFrame ("DogInn");
-	private static JLabel labelNome = new JLabel("Nome");
-	private static JTextField valorNome = new JTextField(200);
-	private static JLabel labelEmail = new JLabel("E-mail");
-	private static JTextField valorEmail = new JTextField(200);
-	private static JLabel labelEnd = new JLabel("Endereco");
-	private static JTextField valorEnd = new JTextField(200);
-	private static JLabel labelSenha = new JLabel("Senha");
-	private static JTextField valorSenha = new JTextField(200);
-	private static JLabel labelTelefone = new JLabel("Telefone");
-	private static JTextField valorDDD = new JTextField(3);
-	private static JTextField valorTelefone = new JTextField(10);
-	private static JButton botaoCadastrar = new JButton("Cadastrar");
-	private static JCheckBox termosAceite = new JCheckBox("Li e concordo com os termos");
+	private JFrame janela;
+	private JLabel labelNome = new JLabel("Nome");
+	private JTextField valorNome;
+	private JLabel labelEmail = new JLabel("E-mail");
+	private JTextField valorEmail;
+	private JLabel labelEnd = new JLabel("Endereco");
+	private JTextField valorEnd;
+	private JLabel labelSenha = new JLabel("Senha");
+	private JTextField valorSenha;
+	private JLabel labelTelefone = new JLabel("Telefone");
+	private JTextField valorDDD;
+	private JTextField valorTelefone;
+	private JButton botaoCadastrar = new JButton("Cadastrar");
+	private String[] newData = new String[9];
+	private JCheckBox termosAceite = new JCheckBox("Li e concordo com os termos");
+	private static ControleDados dados;
+	private int posicao;
 	
-	public CadastroCliente () {
+	public void cadastraCliente (ControleDados d, Listas p, int pos) {
+		posicao = pos;
+		dados = d;
+		
+		janela = new JFrame("DogInn");
+		
+		valorNome = new JTextField(dados.getCliente()[pos].getNomeCliente(), 200); 
+		valorEmail = new JTextField(dados.getCliente()[pos].getEmailCliente(), 200);
+		valorEnd = new JTextField(dados.getCliente()[pos].getEnderecoCliente(), 200);
+		valorSenha = new JTextField(dados.getCliente()[pos].getSenhaCliente(), 200);
+		valorDDD = new JTextField(String.valueOf(dados.getCliente()[pos].getTelCliente().getDDD()), 3);
+		valorTelefone = new JTextField(String.valueOf(dados.getCliente()[pos].getTelCliente().getNumero()), 10);
+		
+	
+	//public CadastroCliente () {
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelEnd.setBounds(40, 50, 150, 25);
@@ -56,17 +74,45 @@ public class CadastroCliente implements ActionListener {
 		janela.add(botaoCadastrar);
 		janela.add(termosAceite);
 		
-		janela.setSize(400, 250);
-		janela.setVisible(true);
+		this.janela.setSize(400, 250);
+		this.janela.setVisible(true);
 		
 		botaoCadastrar.addActionListener(this);
-
 	}
+	//}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		Object src = e.getSource();
 		
+		if(src == botaoCadastrar) {
+			try {
+				boolean res;
+				
+				newData[0] = Integer.toString(dados.getQtdCliente());
+				
+				newData[1] = valorNome.getText();
+				newData[2] = valorEmail.getText();
+				newData[3] = valorEnd.getText();
+				newData[4] = valorSenha.getText();
+				newData[5] = valorDDD.getText();
+				newData[6] = valorTelefone.getText();
+				
+				res = dados.inserirCliente(newData);
+			if(res) {
+				JOptionPane.showMessageDialog(null, 
+					"Usuário cadastrado com sucesso", null, 
+					JOptionPane.INFORMATION_MESSAGE);
+			}
+			}catch (NullPointerException exc1) {
+				mensagemErro();
+			}
+		}
+	}
+	
+	public void mensagemErro() {
+		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!", null, JOptionPane.ERROR_MESSAGE);
 	}
 
 }

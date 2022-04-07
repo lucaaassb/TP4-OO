@@ -7,12 +7,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import Controller.ControleDados;
+
 public class TelaInicial implements ActionListener {
 
     private static JFrame janela = new JFrame("DogInn");
     private static JLabel titulo = new JLabel("Menu Principal");
     private static JButton cliente = new JButton("Cliente");
     private static JButton petSitter = new JButton("PetSitter");
+    public static ControleDados dados = new ControleDados();
 
     public TelaInicial () {
         titulo.setFont(new Font("Arial", Font.BOLD, 20));

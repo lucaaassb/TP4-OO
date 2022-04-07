@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import Controller.*;
+import View.*;
 
 public class LoginCliente implements ActionListener {
 	
@@ -16,6 +18,7 @@ public class LoginCliente implements ActionListener {
 	private static JLabel senha = new JLabel("Senha");
 	private static JPasswordField senhaText = new JPasswordField(20);
 	private static JButton login = new JButton("Login");
+	public static ControleDados dados = new ControleDados();
 	
 	public LoginCliente () {
 		
@@ -41,7 +44,11 @@ public class LoginCliente implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		Object src = e.getSource();
 		
+		if(src == login) {
+			new Listas().mostrarDados(dados, 1);
+		}
 	}
 
 }

@@ -7,11 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import Controller.ControleDados;
+
 public class TelaCliente implements ActionListener {
 	private static JFrame janela = new JFrame("DogInn");
 	private static JLabel titulo = new JLabel("Cliente");
 	private static JButton login = new JButton("Login");
 	private static JButton cadastro = new JButton("Cadastrar");
+	public static ControleDados dados = new ControleDados();
 	
 	public TelaCliente () {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
@@ -38,10 +41,12 @@ public class TelaCliente implements ActionListener {
         // TODO Auto-generated method stub
     	Object src = e.getSource();
     	
-    	if(src==login)
+    	if(src==login) 
 			new LoginCliente();
-    	if(src==cadastro)
-    		new CadastroCliente();
+    	
+    	if(src == cadastro)
+    		new CadastroCliente().cadastraCliente(dados, this, 0);
+    		System.out.println("Passei por aqui, linha 32 construtor de tela cliente");
 
     }
 
