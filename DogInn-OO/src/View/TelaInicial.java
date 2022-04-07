@@ -53,8 +53,6 @@ public class TelaInicial implements ActionListener {
     	
     	if(src == cadastroCliente)
     		new Listas().mostrarDados(dados, 2);
-		
-
     }
 
 }
