@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.*;
-import Model.Dados;
 
 public class ControleDados {
 	private Dados d = new Dados();
@@ -59,6 +58,19 @@ public class ControleDados {
 						                dadosCliente[4], new Telefone(Integer.parseInt(dadosCliente[5]),
 								        Integer.parseInt(dadosCliente[6])));
 				d.inserirCliente(c, Integer.parseInt(dadosCliente[0]));
+				return true;
+		}
+	}
+	
+	public boolean inserirSitter(String[] dadosSitter) {
+		if(!dadosSitter[3].matches("[0-9]+") || !dadosSitter[4].matches("[0-9]+") || 
+				!dadosSitter[5].matches("[0-9]+") || !dadosSitter[6].matches("[0-9]+")) {
+			return false;
+		} else {
+				PetSitter ps = new PetSitter(dadosSitter[1], dadosSitter[2], dadosSitter[3], 
+						           dadosSitter[4], new Telefone(Integer.parseInt(dadosSitter[5]),
+								   Integer.parseInt(dadosSitter[6])));
+				d.inserirSitter(ps, Integer.parseInt(dadosSitter[0]));
 				return true;
 		}
 	}

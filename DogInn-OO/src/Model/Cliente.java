@@ -1,9 +1,5 @@
 package Model;
 
-import java.util.*;
-
-import modelo.Telefone;
-
 public class Cliente {
 	private String nomeCliente, emailCliente, enderecoCliente, senhaCliente;
 	private Telefone telCliente;

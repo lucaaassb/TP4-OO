@@ -1,26 +1,31 @@
 package Model;
+
 public class PetSitter {
-	String nomePetSitter, sobrenomePetSitter, emailPetSitter, enderecoPetSitter, senhaPetSitter, telefonePetSitter;
+	private String nomePetSitter, emailPetSitter, enderecoPetSitter, senhaPetSitter;
+	private Telefone telPetSitter;
 	
-	PetSitter(String nomePetSitter, String sobrenomePetSitter, String emailPetSitter, String enderecoPetSitter, String senhaPetSitter, String telefonePetSitter) {
+
+	
+	public PetSitter() {
+		super();
+	}
+
+	public PetSitter(String nomePetSitter, String emailPetSitter, String enderecoPetSitter, String senhaPetSitter,
+			Telefone telPetSitter) {
+		// TODO Auto-generated constructor stub
 		this.nomePetSitter = nomePetSitter;
-		this.sobrenomePetSitter = sobrenomePetSitter;
 		this.emailPetSitter = emailPetSitter;
 		this.enderecoPetSitter = enderecoPetSitter;
 		this.senhaPetSitter = senhaPetSitter;
-		this.telefonePetSitter = telefonePetSitter;
+		this.telPetSitter = telPetSitter;
 	}
 
-	public PetSitter() {
-		
+	public String toString() {
+		return "Nome do cliente" + nomePetSitter;
 	}
 
 	public String getNomePetSitter() {
 		return nomePetSitter;
-	}
-
-	public String getSobrenomePetSitter() {
-		return sobrenomePetSitter;
 	}
 
 	public String getEmailPetSitter() {
@@ -35,16 +40,12 @@ public class PetSitter {
 		return senhaPetSitter;
 	}
 
-	public String getCelularPetSitter() {
-		return telefonePetSitter;
+	public Telefone getTelPetSitter() {
+		return telPetSitter;
 	}
 
 	public void setNomePetSitter(String nomePetSitter) {
 		this.nomePetSitter = nomePetSitter;
-	}
-
-	public void setSobrenomePetSitter(String sobrenomePetSitter) {
-		this.sobrenomePetSitter = sobrenomePetSitter;
 	}
 
 	public void setEmailPetSitter(String emailPetSitter) {
@@ -59,7 +60,7 @@ public class PetSitter {
 		this.senhaPetSitter = senhaPetSitter;
 	}
 
-	public void setTelefonePetSitter(String telefonePetSitter) {
-		this.telefonePetSitter = telefonePetSitter;
+	public void setTelPetSitter(Telefone telPetSitter) {
+		this.telPetSitter = telPetSitter;
 	}
 }

@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.*;
-
 public class Dados {
 	private  Pet[] pets = new Pet[50];
 	private int qtdPet = 0;
@@ -57,4 +55,12 @@ public class Dados {
 		this.cliente[pos] = c;
 		if(pos == qtdCliente) qtdCliente++;
 	}
+
+	public void inserirSitter(PetSitter ps, int pos) {
+		// TODO Auto-generated method stub
+		this.sitter[pos] = ps;
+		if(pos == qtdSitter) qtdSitter++;
+		
+	}
+	
 }

@@ -1,11 +1,16 @@
 package Controller;
+
 import Model.*;
-import Model.Dados;
 
 
 public class ControlePet {
 	private Pet[] a;
 	private int qtdPets;
+	
+	public ControlePet(ControleDados d) {
+		a = d.getPets();
+		qtdPets = d.getQtdPet();
+	}
 	
 	public String[] getNomePet() {
 		String[] s = new String[qtdPets];
