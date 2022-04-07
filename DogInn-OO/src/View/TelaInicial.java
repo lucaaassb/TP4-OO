@@ -22,13 +22,12 @@ public class TelaInicial implements ActionListener {
         titulo.setBounds(120, 10, 150, 30);
         cliente.setBounds(140, 55, 100, 40);
         petSitter.setBounds(140, 105, 100, 40);
-        cadastroCliente.setBounds(90, 155, 200, 40);
+        cadastroCliente.setBounds(90, 105, 200, 40);
 
         janela.setLayout(null);
 
         janela.add(titulo);
         janela.add(cliente);
-        janela.add(petSitter);
         janela.add(cadastroCliente);
 
         janela.setSize(400, 250);
@@ -51,9 +50,6 @@ public class TelaInicial implements ActionListener {
     	
     	if(src == cliente)
 			new LoginCliente();
-    	
-    	if(src == petSitter)
-    		new TelaSitter();
     	
     	if(src == cadastroCliente)
     		new Listas().mostrarDados(dados, 2);

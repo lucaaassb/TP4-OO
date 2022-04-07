@@ -21,11 +21,10 @@ public class TelaCliente2 implements ActionListener {
         titulo.setBounds(155, 10, 150, 30);
 		contratar.setBounds(115, 55, 150, 40);
 		cadastraCliente.setBounds(115, 105, 150, 40);
-		listarPets.setBounds(115, 155, 150, 40);
+		listarPets.setBounds(115, 105, 150, 40);
 		
 		janela.setLayout(null);
 		janela.add(titulo);
-		janela.add(cadastraCliente);
 		janela.add(contratar);
 		janela.add(listarPets);
 		
@@ -44,7 +43,8 @@ public class TelaCliente2 implements ActionListener {
     	
     	if(src == contratar)
     		new Listas().mostrarDados(dados, 3);
-
+    	if(src == listarPets)
+    		new Listas().mostrarDados(dados, 1);
     }
 
 }

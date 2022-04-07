@@ -7,24 +7,39 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
+import Controller.ControleDados;
+
 import javax.swing.JCheckBox;
 
 public class CadastroPet implements ActionListener {
 	private static JFrame janela = new JFrame ("DogInn");
 	private static JLabel labelNome = new JLabel("Nome");
-	private static JTextField valorNome = new JTextField(200);
+	private static JTextField valorNome;
 	private static JLabel labelAnimal = new JLabel("Animal");
-	private static JTextField valorAnimal = new JTextField(200);
+	private static JTextField valorAnimal;
 	private static JLabel labelTamanho = new JLabel("Tamanho");
-	private static JTextField valorTamanho = new JTextField(200);
+	private static JTextField valorTamanho;
 	private static JLabel labelSexo = new JLabel("Sexo");
-	private static JTextField valorSexo = new JTextField(200);
+	private static JTextField valorSexo ;
 	private static JLabel labelPeso = new JLabel("Peso");
-	private static JTextField valorPeso = new JTextField(200);
-	private static JButton botaoCadastrar = new JButton("Cadastrar");
+	private static JTextField valorPeso;
+	private static JButton botaoCadastrar = new JButton("Selecionar");
+	private static ControleDados dados;
+	private int posicao;
+	
+	public void cadastraPet(ControleDados d, Listas p, int pos) {
+		posicao = pos;
+		dados = d;
+		
+		valorNome = new JTextField(dados.getPets()[pos].getNome(), 200);
+		valorAnimal = new JTextField(dados.getPets()[pos].getAnimal(), 200);
+		valorTamanho = new JTextField(dados.getPets()[pos].getTamanho(), 200);
+		valorSexo = new JTextField(dados.getPets()[pos].getSexo(), 200);
+		valorPeso = new JTextField(String.valueOf(dados.getPets()[pos].getPeso()), 200);
 
 	
-	public CadastroPet () {
+	//public CadastroPet () {
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelTamanho.setBounds(40, 50, 150, 25);
@@ -55,8 +70,8 @@ public class CadastroPet implements ActionListener {
 		janela.setVisible(true);
 		
 		botaoCadastrar.addActionListener(this);
-
-	}	
+	}
+	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {

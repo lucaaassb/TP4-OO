@@ -165,6 +165,11 @@ public class Listas implements ActionListener, ListSelectionListener {
 			new CadastroSitter().cadastraSitter(dados, this, 
 					listaSitter.getSelectedIndex());
 		}
+		
+		if(e.getValueIsAdjusting() && src == listaPets) {
+			new CadastroPet().cadastraPet(dados, this, 
+					listaPets.getSelectedIndex());
+		}
 
 	}
 
