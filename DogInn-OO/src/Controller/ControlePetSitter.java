@@ -2,6 +2,15 @@ package Controller;
 
 import Model.*;
 
+/**
+ * Verificar os dados salvos de Pet Sitters, armazena, compara e procura nas classes
+ * graficas
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ *
+ */
+
 public class ControlePetSitter {
 	private PetSitter[] ps;
 	private int qtdSitter;

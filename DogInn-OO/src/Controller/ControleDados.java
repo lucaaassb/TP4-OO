@@ -2,6 +2,15 @@ package Controller;
 
 import Model.*;
 
+/**
+ * Verificar os dados salvos, armazena, compara e procura nas classes
+ * graficas
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ *
+ */
+
 public class ControleDados {
 	private Dados d = new Dados();
 	
