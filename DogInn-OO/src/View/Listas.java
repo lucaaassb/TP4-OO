@@ -32,6 +32,7 @@ public class Listas implements ActionListener, ListSelectionListener {
 	public void mostrarDados(ControleDados d, int opt) {
 		dados = d;
 		
+		//Switch para definir qual JList será mostrada ao usuário de acordo com o botao selecionado
 		switch (opt) {
 		//Lista de pets
 		case 1:
