@@ -12,6 +12,7 @@ public class ControlePet {
 		qtdPets = d.getQtdPet();
 	}
 	
+	//Garantido que a quantidade de informacoes coletadas e a mesma que as passadas
 	public String[] getNomePet() {
 		String[] s = new String[qtdPets];
 		for(int i = 0; i < qtdPets; i++) {

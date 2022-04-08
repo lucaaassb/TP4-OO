@@ -1,5 +1,11 @@
 package View;
-
+/**
+ * Tela para mostrar os dados do petSitters selecionados
+ * na JList
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -45,7 +51,7 @@ public class CadastroSitter implements ActionListener {
 		valorDDD = new JTextField(String.valueOf(dados.getSitter()[pos].getTelPetSitter().getDDD()), 3);
 		valorTelefone = new JTextField(String.valueOf(dados.getSitter()[pos].getTelPetSitter().getNumero()), 10);
 	
-	//public CadastroSitter () {
+	//posicionando os botões e campos de texto nas telas
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelEnd.setBounds(40, 50, 150, 25);
@@ -74,7 +80,6 @@ public class CadastroSitter implements ActionListener {
 		janela.add(valorDDD);
 		janela.add(valorTelefone);
 		janela.add(botaoContratar);
-		janela.add(termosAceite);
 		
 		janela.setSize(400, 280);
 		janela.setVisible(true);

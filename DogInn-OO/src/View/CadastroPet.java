@@ -1,5 +1,11 @@
 package View;
-
+/**
+ * Tela para mostrar os dados do pets selecionados
+ * na JList
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -39,7 +45,7 @@ public class CadastroPet implements ActionListener {
 		valorPeso = new JTextField(String.valueOf(dados.getPets()[pos].getPeso()), 200);
 
 	
-	//public CadastroPet () {
+	//Posicionando os botoes e campos de texto na tela
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelTamanho.setBounds(40, 50, 150, 25);
@@ -76,6 +82,12 @@ public class CadastroPet implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		Object src = e.getSource();
+		
+		if(src == botaoCadastrar)
+			JOptionPane.showMessageDialog(null, 
+					"Pet cadastrado com sucesso", null, 
+					JOptionPane.INFORMATION_MESSAGE);
 		
 		
 	}

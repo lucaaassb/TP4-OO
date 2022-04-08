@@ -1,5 +1,12 @@
 package View;
-
+/**
+ * Tela que recebe as informacoes de login
+ * do cliente antes de ter acesso a lista de 
+ * pets e petSitters
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

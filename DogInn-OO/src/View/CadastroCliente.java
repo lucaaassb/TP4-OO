@@ -1,5 +1,11 @@
 package View;
-
+/**
+ * Tela para mostrar os dados do clientes selecionados
+ * na JList
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -43,7 +49,7 @@ public class CadastroCliente implements ActionListener {
 		valorTelefone = new JTextField(String.valueOf(dados.getCliente()[pos].getTelCliente().getNumero()), 10);
 		
 	
-	//public CadastroCliente () {
+	//Montando a tela posicionando os botoes e campos de texto
 		labelNome.setBounds(40, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
 		labelEnd.setBounds(40, 50, 150, 25);
@@ -90,6 +96,7 @@ public class CadastroCliente implements ActionListener {
 			try {
 				boolean res;
 				
+				// Inserindo os dados pré cadastrados nos campos correspondentes
 				newData[0] = Integer.toString(dados.getQtdCliente());
 				newData[0] = Integer.toString(posicao);
 				
@@ -100,7 +107,7 @@ public class CadastroCliente implements ActionListener {
 				newData[5] = valorDDD.getText();
 				newData[6] = valorTelefone.getText();
 				
-				res = dados.inserirCliente(newData);
+				
 				JOptionPane.showMessageDialog(null, 
 					"Usuário cadastrado com sucesso", null, 
 					JOptionPane.INFORMATION_MESSAGE);

@@ -41,6 +41,7 @@ public class ControleDados {
 		return this.d.getQtdSitter();
 	}
 	
+	// Metodo que indica onde os dados dos pets devem ser cadastrados
 	public boolean inserirPet(String[] dadosPet) {
 		if(!dadosPet[3].matches("[0-9]+") || !dadosPet[4].matches("[0-9]+") || 
 				!dadosPet[5].matches("[0-9]+") || !dadosPet[6].matches("[0-9]+")) {
@@ -53,6 +54,7 @@ public class ControleDados {
 		}
 	}
 	
+	// Metodo que indica onde os dados dos clientes devem ser cadastrados
 	public boolean inserirCliente(String[] dadosCliente) {
 		if(!dadosCliente[3].matches("[0-9]+") || !dadosCliente[4].matches("[0-9]+") || 
 				!dadosCliente[5].matches("[0-9]+") || !dadosCliente[6].matches("[0-9]+")) {
@@ -66,6 +68,7 @@ public class ControleDados {
 		}
 	}
 	
+	// Metodo que indica onde os dados dos Sitters devem ser cadastrados
 	public boolean inserirSitter(String[] dadosSitter) {
 		if(!dadosSitter[3].matches("[0-9]+") || !dadosSitter[4].matches("[0-9]+") || 
 				!dadosSitter[5].matches("[0-9]+") || !dadosSitter[6].matches("[0-9]+")) {

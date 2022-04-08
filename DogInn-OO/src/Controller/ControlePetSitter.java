@@ -11,6 +11,7 @@ public class ControlePetSitter {
 		qtdSitter = d.getQtdSitter();
 	}
 	
+	//Garantido que a quantidade de informacoes coletadas e a mesma que as passadas
 	public String[] getNomePetSitters() {
 		String[] s = new String[qtdSitter];
 		for(int i = 0; i < qtdSitter; i++) {

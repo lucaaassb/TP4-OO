@@ -10,7 +10,7 @@ public class ControleCliente {
 		c = d.getCliente();
 		qtdCliente = d.getQtdCliente();
 	}
-	
+	//Garantido que a quantidade de informacoes coletadas e a mesma que as passadas
 	public String[] getNomeClientes() {
 		String[] s = new String[qtdCliente];
 		for(int i = 0; i < qtdCliente; i++) {

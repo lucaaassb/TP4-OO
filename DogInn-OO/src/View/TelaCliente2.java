@@ -1,5 +1,12 @@
 package View;
-
+/**
+ * Tela que contem os botoes que levam
+ * a lista de pets e a lista de petSitters
+ * para o serviço ser contratado
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

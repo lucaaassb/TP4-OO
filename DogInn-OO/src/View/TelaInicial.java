@@ -1,5 +1,12 @@
 package View;
-
+/**
+ * Tela inicial do projeto, com os botoes que levam
+ * a uma lista de clientes pre cadastrados e a tela 
+ * de login
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

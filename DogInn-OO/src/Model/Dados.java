@@ -1,8 +1,8 @@
 package Model;
 
 /**
- * Classe de Dadps, contendo os metodos desta classe e servindo para
- * armazenar os dados do projeto, e ......
+ * Classe de Dados, contendo os metodos desta classe e servindo para
+ * armazenar os dados do projeto, e organizar os dados de Pet, Cliente e Sitter
  *
  * @author Gabriel Cabral
  * @version 1.0 (Abril 2022)

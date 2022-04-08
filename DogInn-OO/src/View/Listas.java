@@ -1,5 +1,11 @@
 package View;
-
+/**
+ * Conjunto de telas com um switch, que mostra 
+ * JLists de Pet, Clientes e PetSitters já cadastrados
+ *
+ * @author Gabriel Cabral
+ * @version 1.0 (Abril 2022)
+ */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -135,16 +141,19 @@ public class Listas implements ActionListener, ListSelectionListener {
 		if(src == cadastraCliente)
 			new CadastroCliente().cadastraCliente(dados, this, 0);
 		
+		//Atualiza a lista de pets
 		if(src == atualizaPet) {
 			listaPets.setListData(new ControlePet(dados).getNomePet());
 			listaPets.updateUI();
 		}
 		
+		//atualiza a lista de clientes
 		if(src == atualizaCliente) {
 			listaClientes.setListData(new ControleCliente(dados).getNomeClientes());
 			listaClientes.updateUI();
 		}
 		
+		//atualiza a lista de petSitters
 		if(src == atualizaSitter) {
 			listaSitter.setListData(new ControlePetSitter(dados).getNomePetSitters());
 			listaSitter.updateUI();
@@ -152,7 +161,7 @@ public class Listas implements ActionListener, ListSelectionListener {
 		
 	}
 
-	
+	// implementa as ações nos elementos das JLists criadas anteriormente
 	public void valueChanged(ListSelectionEvent e) {
 		Object src = e.getSource();
 
